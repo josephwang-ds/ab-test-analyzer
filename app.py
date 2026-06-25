@@ -334,6 +334,20 @@ def add_css() -> None:
             padding: 1rem 1rem 0.8rem;
         }
         div[data-testid="stMetric"] * { color: #111827; }
+        /* Let long metric values (e.g. "2,557 / 2,443", "RAMP WITH CAUTION") wrap instead of truncating */
+        div[data-testid="stMetricValue"] {
+            font-size: 1.45rem;
+            line-height: 1.2;
+            white-space: normal;
+            overflow: visible;
+            overflow-wrap: anywhere;
+        }
+        div[data-testid="stMetricValue"] > div {
+            white-space: normal !important;
+            overflow: visible !important;
+            text-overflow: clip !important;
+        }
+        div[data-testid="stMetricLabel"] { font-size: 0.82rem; }
         .callout {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
