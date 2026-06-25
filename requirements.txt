@@ -3,3 +3,7 @@ pandas>=2.0
 numpy>=1.26
 scipy>=1.12
 plotly>=5.20
+# Optional: enables LLM-assisted column mapping (DeepSeek / Qwen / OpenAI,
+# all via the OpenAI-compatible SDK). The app works fully without it —
+# rule-based mapping is the default.
+openai>=1.0
